@@ -1,4 +1,4 @@
-public class BinaryTreea {
+public class BinaryTree {
   public Node root;
 
   public void addNode(Node node) {
@@ -23,8 +23,9 @@ public class BinaryTreea {
         insertNode(parent.rightChild, node);
       }
     }
+  }
   
-  public static boolean serachValue(Node root, int value) {
+  public static boolean searchValue(Node root, int value) {
     if (root == null) {
       return false;
     } else {
@@ -33,7 +34,7 @@ public class BinaryTreea {
       } else if (root.getValue() > value) {
         return searchValue(root.leftChild, value);
       } else {
-        return searchValue(root,rightChild, value);
+        return searchValue(root.rightChild, value);
       }
     }
   }
